@@ -10,7 +10,10 @@
   },
   "author": "",
   "license": "ISC",
-    "devDependencies": {
+  "devDependencies": {
     "lite-server": "^2.2.2"
+  },
+  "dependencies": {
+    "popper.js": "^1.14.6"
   }
 }
