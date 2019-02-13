@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
@@ -14,7 +13,6 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Le Chocolat</title>
 </head>
-
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
@@ -111,73 +109,54 @@
             </div>
         </div>
     </div>
-
-
     <!-- reserve basket -->
     <div class="col-md-8 offset-md-2" id="reserve">
         <div class="card">
             <div class="card-header bg-warning text-light">
                 Reserve your baskets
             </div>
-
             <div class="card-body">
                 <form>
-                    <div class="form-group">
-
-                        <div class="form-group row">
-                            <div class="col-sm-4">
-                                <label for="numOfBaskets">Number of baskets:</label>
-
-                            </div>
-                            <div class="col">
-                                <input type="radio" name="numOfBaskets" value="1"> 1
-                                <input type="radio" name="numOfBaskets" value="2"> 2
-                                <input type="radio" name="numOfBaskets" value="3"> 3
-                                <input type="radio" name="numOfBaskets" value="4"> 4
-                                <input type="radio" name="numOfBaskets" value="5"> 5
-                                <input type="radio" name="numOfBaskets" value="6"> 6
-                            </div>
+                    <div class="form-group row">
+                        <div class="col-sm-4">
+                            <label for="numOfBaskets">Number of baskets:</label>
                         </div>
-
-
-
-                        <div class="form-group row">
-                            <div class="col-xs-12 col-sm">
-                                <label>Date and Time:</label>
-                            </div>
-
-
-                            <div class="col-xs-12 col-sm">
-                                <div class="input-group mb-3">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text" ><i class="fa fa-calendar"
-                                                aria-hidden="true"></i></span>
-                                    </div>
-                                    <input type="date" class="form-control" placeholder="Pickup date" aria-describedby="basic-addon1">
-                                </div>
-                            </div>
-                            <div class="col-xs-12 col-sm">
-                                    <div class="input-group mb-3">
-                                            <div class="input-group-prepend">
-                                                <span class="input-group-text" >         <i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                                            </div>
-                                            <input type="time" class="form-control" placeholder="Pickup date" aria-describedby="basic-addon1">
-                                        </div>
-                            </div>
-
+                        <div class="col">
+                            <input type="radio" name="numOfBaskets" value="1"> 1
+                            <input type="radio" name="numOfBaskets" value="2"> 2
+                            <input type="radio" name="numOfBaskets" value="3"> 3
+                            <input type="radio" name="numOfBaskets" value="4"> 4
+                            <input type="radio" name="numOfBaskets" value="5"> 5
+                            <input type="radio" name="numOfBaskets" value="6"> 6
                         </div>
                     </div>
-                    <input type="submit" href="#" class="btn btn-primary" value="reserve">
+                    <div class="form-group row">
+                        <div class="col-xs-12 col-sm">
+                            <label>Date and Time:</label>
+                        </div>
+                        <div class="col-xs-12 col-sm">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Pickup date" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Pickup date" aria-describedby="basic-addon1">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="reserve">
                 </form>
             </div>
-
-   
         </div>
-
     </div>
     </div>
-
-
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -236,5 +215,4 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
-
 </html>
