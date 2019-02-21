@@ -1,239 +1,392 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <title>Le Chocolat</title>
     <!-- Required meta tags always come first -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <!-- font awesome icons -->
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-    <!-- Local external CSS -->
-    <link rel="stylesheet" href="css/styles.css">
-    <title>Le Chocolat</title>
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <style>
+        #modalClicker {
+            cursor: pointer;
+        }
+    </style>
 </head>
+
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-md bg-light navbar-light fixed-top">
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
         <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="40" width="54"></a>
-            <!-- Sandwich button -->
+            <a class="navbar-brand" href="#"><img src="images/logo.png" height="40" width="54"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav">
-                    <li class="nav-item active"><a class="nav-link" href="./index.html"><span class="fa fa-home fa-md"></span>
-                            Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-md"></span>
-                            About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./menu.html"><span class="fa fa-list fa-md"></span>
-                            Menu</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-md"></span>
-                            Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#">
+                            <span class="fa fa-home fa-lg"></span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html">
+                            <span class="fa fa-info fa-lg"> </span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./menu.html">
+                            <span class="fa fa-list fa-lg"></span> Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html">
+                            <span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a id="modalClicker" data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-inline">
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email
+                                address
+                            </label>
+                            <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputPassword3">
+                                Password
+                            </label>
+                            <input type="password" class="form-control form-control-sm mr-1" id="exampleInputPassword3"
+                                placeholder="Password">
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox">
+                                Remember me
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                    </button>
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reserve Modal -->
+    <div id="basketsModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="reserve-form">Reserve your baskets</h3>
+                    <button type="button" class="close" data-dismiss="modal">&times</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <!-- Number of baskets -->
+                        <div class="form-group row">
+                            <label for="optradio" class="col-12 col-sm-3 col-form-label">
+                                Number of baskets
+                            </label>
+                            <div class="col-12 col-sm-9">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3 </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio4" value="option5">
+                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio6" value="option5">
+                                    <label class="form-check-label" for="inlineRadio6">6 </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Date and Time -->
+                        <div class="form-group row">
+                            <label class="col-12 col-sm-3 col-form-label">Date and Time</label>
+
+                            <!-- Date -->
+                            <div class="input-group col-12 col-sm-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="date"><i class="fa fa-calendar"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <input type="date" class="form-control" placeholder="Date" id="date'">
+                            </div>
+
+                            <!-- Time -->
+                            <div class="input-group col-12 col-sm-4">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="time"><i class="fa fa-clock-o"
+                                            aria-hidden="true"></i></span>
+                                </div>
+                                <input type="time" class="form-control" placeholder="Time" id="time'">
+                            </div>
+                        </div>
+
+                        <!-- Yes/No Buttons -->
+                        <div class="form-group row">
+                            <label for="section" class="col-12 col-sm-3 col-form-label">Home Delivery</label>
+                            <div class="col-sm-9">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="section" id="section-non-smoking" autocomplete="off"
+                                            checked> Yes
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="section" id="section-smoking" autocomplete="off"> No
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel
+                    </button>
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-sm col-sm-offset-2">Reserve</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
     <header class="jumbotron">
         <div class="container">
-            <div class="row row-header">
+            <div class="row row-header  align-items-center">
                 <div class="col-12 col-sm-6">
                     <h1>Le Chocolat</h1>
-                    <p>We combine experience with creativity to create innovative tastes based on classic chocolate
-                        recipes. Our creations will travel you in the chocolate world!
-                    </p>
+                    <p>We combine experience with creativity to create innovative tastes based
+                        on classic chocolate recipes. Our creations will travel you in the chocolate world!</p>
                 </div>
-                <div class="col-sm">
-                    <img src="images/logo.png" class="img-fluid ">
+
+                <!-- Logo -->
+                <div class="col col-sm-3">
+                    <img src="images/logo.png" class="img-fluid">
                 </div>
-                <div class="col-sm">
-                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#reserveModal">
-                        RESERVE YOUR BASKET
-                      </button>
-            
-                </div>
+
+                <!-- Reserve your baskets yellow button -->
+                <div class="col-12 col-sm-3 ">
+                    <!-- <a href="#reserve-form" class="btn btn-warning">Reserve your baskets</a> -->
+                    <a type="button" class="btn btn-warning btn-sm btn-block" data-toggle="modal"
+                        data-target="#basketsModal">
+                        Reserve your baskets
+                    </a> </div>
+
             </div>
         </div>
     </header>
-    <div class="modal" tabindex="-1" role="dialog">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <p>Modal body text goes here.</p>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary">Save changes</button>
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
-        </div>
-      </div>
+
+
+    <!-- MAIN CONTENT -->
     <div class="container">
-        <!--first row-->
-        <div class="row flex-row-reverse row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
+
+        <!-- Carousel-->
+        <div class="row row-content">
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-interval="5000" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+
+                        <div class="carousel-item active">
+                            <img src="images/dark85.jpg" alt="85% DARK CHOCOLATE">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2>85% DARK CHOCOLATE
+                                    <span class="badge badge-danger">HOT</span>
+                                    <span class="badge badge-pill badge-success">$0.99</span>
+                                </h2>
+                                <p class="col d-none d-sm-block">Dark chocolate with no added sugar.
+                                    Here you can taste the flavor of cocoa beans.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/promotion.jpg" alt="Our basket">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2>WEEK’S OFFER
+                                    <span class="badge badge-danger">NEW</span>
+                                    <span class="badge badge-pill badge-success">$4.99</span>
+                                </h2>
+                                <p class="col d-none d-sm-block">This week we offer a basket
+                                    with 10 delicious chocolates!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="images/cartoonVasilis.png" alt="Vasilis Wilson">
+                            <div class="carousel-caption d-none d-sm-block">
+                                <h2>Vasilis Wilson
+                                </h2>
+                                <p class="col d-none d-sm-block">Vasilis is well informed of all the current
+                                    trends in pastry and contributes his innovative ideas in our products.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <ol class="carousel-indicators">
+                        <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#mycarousel" data-slide-to="1"></li>
+                        <li data-target="#mycarousel" data-slide-to="2"></li>
+                    </ol>
+                    <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <div class="btn-group" id="carouselButtons">
+                        <button class="btn btn-danger btn-sm" id="carousel-pause">
+                            <span class="fa fa-pause"></span>
+                        </button>
+                        <button class="btn btn-danger btn-sm" id="carousel-play">
+                            <span class="fa fa-play"></span>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- First row -->
+        <div class="row flex-row-reverse row-content align-items-center ">
+            <div class="col-sm-4 col-md-3 ">
                 <h3>Our famous chocolates</h3>
             </div>
-            <div class="col-sm col-md">
+            <div class="col-sm col-md ">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/dark85.jpg" alt="85% DARK CHOCOLATE">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/dark85.jpg"
+                        alt="85% DARK CHOCOLATE">
                     <div class="media-body">
                         <h2 class="mt-0">85% DARK CHOCOLATE
                             <span class="badge badge-danger">HOT</span>
-                            <span class="badge badge-pill badge-success">$0.99</span></h2>
-                        <p class="col d-none d-md-block">Dark chocolate with no added sugar.
-                            Here you can taste the flavor of cocoa beans.</p>
+                            <span class="badge badge-pill badge-success">$0.99</span>
+                        </h2>
+                        <p class="col d-none d-sm-block">Dark chocolate with no added sugar.
+                            Here you can taste the flavor of cocoa beans.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- second row -->
-        <div class="row flex-row-reverse row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
+
+        <!-- Second row -->
+        <div class="row row-content align-items-center flex-row-reverse">
+            <div class="col-sm-4 col-md-3 ">
                 <h3>WEEK’S OFFER</h3>
             </div>
-            <div class="col-sm col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/promotion.jpg" alt="85% DARK CHOCOLATE">
+            <div class="col-sm col-md ">
+                <div class="media ">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center " src="images/promotion.jpg"
+                        alt="Our basket">
                     <div class="media-body">
                         <h2 class="mt-0">Our basket
                             <span class="badge badge-danger">NEW</span>
-                            <span class="badge badge-pill badge-success">$4.99</span>
-                        </h2>
-                        <p class="col d-none d-md-block">This week we offer a basket with 10 delicious chocolates!</p>
+                            <span class="badge badge-pill badge-success">$4.99</span></h2>
+                        <p class="col d-none d-sm-block">This week we offer a basket
+                            with 10 delicious chocolates!
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- third row -->
+
+        <!-- Third row -->
         <div class="row flex-row-reverse row-content align-items-center">
-            <div class="col-sm-4 col-md-3">
+            <div class="col-sm-4 col-md-3 ">
                 <h3>Meet our Specialists</h3>
             </div>
-            <div class="col-sm col-md">
+            <div class="col-sm col-md ">
                 <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/cartoonVasilis.png" alt="Vasilis Wilson">
+                    <img class="d-flex mr-3 img-thumbnail align-self-center" src="images/cartoonVasilis.png"
+                        alt="Vasilis Wilson">
                     <div class="media-body">
                         <h2 class="mt-0">Vasilis Wilson</h2>
-                        <p class="col d-none d-md-block">Vasilis is well informed of all the current
+                        <p class="col d-none d-sm-block">Vasilis is well informed of all the current
                             trends in pastry and contributes his innovative ideas in our products.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- reserve basket -->
-
-
-    <div class="modal fade bd-example-modal-lg" id="reserveModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-          <div class="modal-content">
-            <div class="modal-header ">
-              <h5 class="modal-title " id="exampleModalLabel">Reserve your basket</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-                <form>
-                    <div class="form-group row">
-                        <div class="col-sm-4">
-                            <label for="numOfBaskets">Number of baskets:</label>
-                        </div>
-                        <div class="col">
-                            <input type="radio" name="numOfBaskets" value="1"> 1
-                            <input type="radio" name="numOfBaskets" value="2"> 2
-                            <input type="radio" name="numOfBaskets" value="3"> 3
-                            <input type="radio" name="numOfBaskets" value="4"> 4
-                            <input type="radio" name="numOfBaskets" value="5"> 5
-                            <input type="radio" name="numOfBaskets" value="6"> 6
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="col-xs-12 col-sm-4">
-                            <label>Date and Time:</label>
-                        </div>
-                        <div class="col-xs-12 col-sm-4">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"><i class="fa fa-calendar" aria-hidden="true"></i></span>
-                                </div>
-                                <input type="date" class="form-control" placeholder="Pickup date" name="date" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm">
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text"> <i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                                </div>
-                                <input type="time" class="form-control" placeholder="Pickup date" name="time" aria-describedby="basic-addon1">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                            <div class="col-sm-4 ">
-                                    <label>Home delivery</label>
-                                </div>   
-                        <div class="col-sm-8 btn-group" role="group" aria-label="Communication tools">
-                                    <a role="button" class="btn btn-success" 
-                                    > <input type="radio" name="homeDelivery" value="yes">yes</a>
-                                    <a role="button" class="btn btn-danger"> <input type="radio" name="homeDelivery" value="no">No</a>
-             
-                                </div>
-                        </div>
-                   
-                
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <input type="submit" class="btn btn-primary" value="reserve">
-            </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-
 
     </div>
+
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="row">
-                <!-- Menu footer column -->
                 <div class="col-5 offset-1 col-sm-2">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="./aboutus.html">About</a></li>
+                        <li><a href="./menu.html">Menu</a></li>
+                        <li><a href="./contactus.html">Contact</a></li>
                     </ul>
                 </div>
-                <!-- Address footer column -->
                 <div class="col-6 col-sm-5">
                     <h5>Our Address</h5>
                     <address>
                         121, Clear Wave Road<br>
                         Clear Wave Road, Aloha<br>
                         HAWAII<br>
-                        <i class="fa fa-phone"></i>: +987 6543 2100 <br>
-                        <i class="fa fa-fax "></i>: +987 6543 2101 <br>
-                        <i class="fa fa-envelope "></i>:
-                        Email: <a href="mailto:chocolat@nomail.net">chocolat@nomail.net</a>
+                        <i class="fa fa-phone fa-lg"></i>: +987 6543 2100<br>
+                        <i class="fa fa-fax fa-lg"></i>: +987 6543 2101<br>
+                        <i class="fa fa-envelope fa-lg"></i>: <a
+                            href="mailto:chocolat@nomail.net">chocolat@nomail.net</a>
                     </address>
                 </div>
-                <!-- Social links footer column -->
-                <div class="col col-sm-4 align-self-center">
-                    <div style="text-align:center">
+                <div class="col col-sm-4">
+                    <div class="col-auto" style="text-align:center">
                         <a class="btn btn-social-icon btn-google-plus" href="http://google.com/+">
                             <i class="fa fa-google-plus"></i></a>
                         <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id=">
@@ -246,21 +399,25 @@
                             <i class="fa fa-youtube"></i></a>
                         <a class="btn btn-social-icon" href="mailto:">
                             <i class="fa fa-envelope-o"></i></a>
+
                     </div>
                 </div>
             </div>
-            <!-- Copyright paragraph -->
             <div class="row justify-content-center">
                 <div class="col-auto">
-                    <p> &copy; Copyright 2019 Le Chocolat</p>
+                    <p> &copy; Copyright 2018 Le Chocolat</p>
                 </div>
             </div>
         </div>
     </footer>
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+
+    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/tether/dist/js/tether.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>

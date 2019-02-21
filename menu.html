@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link href="css/styles.css" rel="stylesheet">
     <!-- endbuild -->
-    <title>Le Chocolat: Contact Us</title>
+    <title>Le Chocolat: Menu</title>
 
 </head>
 
@@ -36,9 +36,9 @@
                             <span class="fa fa-home fa-lg"></span> Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="./aboutus.html">
                             <span class="fa fa-info fa-lg"> </span> About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="./menu.html">
+                    <li class="nav-item active"><a class="nav-link" href="./menu.html">
                             <span class="fa fa-list fa-lg"></span> Menu </a></li>
-                    <li class="nav-item active"><a class="nav-link" href="./contactus.html">
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html">
                             <span class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
             </div>
@@ -64,119 +64,70 @@
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Contact us</li>
+                <li class="breadcrumb-item active" aria-current="page">Menu</li>
             </ol>
         </nav>
-        <div class="row row-header">
+
+        <!--         <div class="row row-header">
             <div class="col-12">
-                <h3>Contact Us</h3>
+                <h3>Menu</h3>
                 <hr>
             </div>
-        </div>
+        </div> -->
 
-        <div class="row row-content">
-            <div class="col-12">
-                <h3>Location Information</h3>
+        <div class="row w-100 mb-3">
+            <div class="col-md-3">
+                <div class="card border-info mx-sm-1 p-3">
+                    <div class="card border-info shadow text-info p-3 my-card"><span class="fa fa-car"
+                            aria-hidden="true"></span></div>
+                    <div class="text-info text-center mt-3">
+                        <h4>Cars</h4>
+                    </div>
+                    <div class="text-info text-center mt-2">
+                        <h1>234</h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-4 offset-sm-1">
-                <h5>Our Address</h5>
-                <address style="font-size: 100%">
-                    121, Clear Wave Road<br>
-                    Clear Wave Road, Aloha<br>
-                    HAWAII<br>
-                    <i class="fa fa-phone"></i>: +987 6543 2100<br>
-                    <i class="fa fa-fax"></i>: +987 6543 2101<br>
-                    <i class="fa fa-envelope"></i>:
-                    <a href="mailto:chocolat@nomail.net">chocolat@nomail.net</a>
-                </address>
+            <div class="col-md-3">
+                <div class="card border-success mx-sm-1 p-3">
+                    <div class="card border-success shadow text-success p-3 my-card"><span class="fa fa-eye"
+                            aria-hidden="true"></span></div>
+                    <div class="text-success text-center mt-3">
+                        <h4>Eyes</h4>
+                    </div>
+                    <div class="text-success text-center mt-2">
+                        <h1>9332</h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-6 offset-sm-1">
-                <h5>Map of our Location</h5>
+            <div class="col-md-3">
+                <div class="card border-danger mx-sm-1 p-3">
+                    <div class="card border-danger shadow text-danger p-3 my-card"><span class="fa fa-heart"
+                            aria-hidden="true"></span></div>
+                    <div class="text-danger text-center mt-3">
+                        <h4>Hearts</h4>
+                    </div>
+                    <div class="text-danger text-center mt-2">
+                        <h1>346</h1>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-sm-11 offset-sm-1">
-                <!-- Button group goes here -->
-                <div class="btn-group" role="group" aria-label="Communication tools">
-                    <a role="button" class="btn btn-primary" href="tel:+98765432100 "><i class="fa fa-phone"></i>
-                        Call</a>
-                    <a role="button" class="btn btn-info"><i class="fa fa-skype"></i> Skype</a>
-                    <a role="button" class="btn btn-success" href="mailto:chocolat@nomail.net">
-                        <i class="fa fa-envelope-o"></i> Email</a>
+            <div class="col-md-3">
+                <div class="card border-warning mx-sm-1 p-3">
+                    <div class="card border-warning shadow text-warning p-3 my-card"><span class="fa fa-inbox"
+                            aria-hidden="true"></span></div>
+                    <div class="text-warning text-center mt-3">
+                        <h4>Inbox</h4>
+                    </div>
+                    <div class="text-warning text-center mt-2">
+                        <h1>346</h1>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="row row-content">
-            <div class="col-12">
-                <h3>Send us your Feedback</h3>
-            </div>
-            <div class="col-12 col-md-9">
-                <form>
-                    <div class="form-group row">
-                        <label for="firstname" class="col-md-2 col-form-label">First Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="firstname" name="firstname"
-                                placeholder="First Name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="lastname" class="col-md-2 col-form-label">Last Name</label>
-                        <div class="col-md-10">
-                            <input type="text" class="form-control" id="lastname" name="lastname"
-                                placeholder="Last Name">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</label>
-                        <div class="col-5 col-sm-4 col-md-3">
-                            <div class="input-group">
-                                <!--<div class="input-group-addon">(</div>-->
-                                <input type="tel" class="form-control" id="areacode" name="areacode"
-                                    placeholder="Area code">
-                                <!--<div class="input-group-addon">)</div>-->
-                            </div>
-                        </div>
-                        <div class="col-7 col-sm-6 col-md-7">
-                            <input type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="emailid" class="col-md-2 col-form-label">Email</label>
-                        <div class="col-md-10">
-                            <input type="email" class="form-control" id="emailid" name="emailid" placeholder="Email">
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="form-check col-md-6 offset-md-2">
-                            <label class="form-check-label">
-                                <input type="checkbox" class="form-check-input" name="approve" value="">
-                                <strong>May we contact you?</strong>
-                            </label>
-                        </div>
-                        <div class="col-md-3 offset-md-1">
-                            <select class="form-control">
-                                <option>Tel.</option>
-                                <option>Email</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label for="feedback" class="col-md-2 col-form-label">Your Feedback</label>
-                        <div class="col-md-10">
-                            <textarea class="form-control" id="feedback" name="feedback" rows="12"></textarea>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <div class="offset-md-2 col-md-10">
-                            <button type="submit" class="btn btn-primary">Send Feedback</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="col-12 col-md">
-            </div>
-        </div>
-
     </div>
+
+
 
     <footer class="footer">
         <div class="container">
